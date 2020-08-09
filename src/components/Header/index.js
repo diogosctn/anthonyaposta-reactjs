@@ -46,7 +46,7 @@ class Header extends Component {
           <HeaderButtons isActive={false} name="Blog" path="/Blog" />
           <HeaderButtons isActive={false} name="Membros" path="/Members" />
         </div>
-        <img src={hr} />
+        <img src={hr} alt="header-line" />
       </header>
     );
   }

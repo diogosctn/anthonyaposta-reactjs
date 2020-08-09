@@ -1,0 +1,21 @@
+div .main-home {
+  display: flex;
+  flex-direction: column;
+  height: 72px;
+  padding-top: 115px;
+  padding-bottom: 25px;
+  font: inherit;
+  max-width: 620px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+div .main-home img {
+  width: 100%;
+  padding: 0 30px;
+}
+
+div .main-home h2 {
+  font-size: 20px;
+  color: #aaa;
+}
