@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Members from "./pages/Members";
+import NewPost from "./pages/NewPost";
 
 class App extends Component {
   state = {
@@ -27,6 +28,7 @@ class App extends Component {
           <Route exact path="/About" component={About} />
           <Route exact path="/Blog" component={Blog} />
           <Route exact path="/Members" component={Members} />
+          <Route exact path="/NewPost" component={NewPost} />
         </Switch>
       </BrowserRouter>
     ) : (

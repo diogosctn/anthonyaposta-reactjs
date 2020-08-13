@@ -1,0 +1,16 @@
+div .main-newpost {
+  display: flex;
+  flex-direction: column;
+  height: 72px;
+  padding-top: 115px;
+  padding-bottom: 25px;
+  font: inherit;
+  max-width: 620px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+div#html-editor {
+  width: 100%;
+  padding-top: 20px;
+}
