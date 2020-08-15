@@ -38,7 +38,7 @@ class Header extends Component {
               <h2>Clusterizando conhecimento.</h2>
             </div>
           </Link>
-          <Link to="/login">Entrar</Link>
+          <Link to="/Login">Entrar</Link>
         </div>
         <div className="header-buttons">
           <HeaderButtons isActive={false} name="Home" path="/" />
