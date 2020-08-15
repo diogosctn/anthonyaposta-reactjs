@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-//import firebase from "./firebase";
+import firebase from "./firebase";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -8,11 +8,19 @@ import Blog from "./pages/Blog";
 import Members from "./pages/Members";
 import NewPost from "./pages/NewPost";
 import Login from "./pages/Login";
+import SingUp from "./pages/SingUp";
+import Perfil from "./pages/Perfil";
 
 class App extends Component {
   state = {
-    firebaseInitialized: true,
+    firebaseInitialized: false,
   };
+
+  componentDidMount() {
+    firebase.isInitialized().then((resultado) => {
+      this.setState({ firebaseInitialized: resultado });
+    });
+  }
 
   render() {
     return this.state.firebaseInitialized !== false ? (
@@ -25,6 +33,8 @@ class App extends Component {
           <Route exact path="/Members" component={Members} />
           <Route exact path="/NewPost" component={NewPost} />
           <Route exact path="/Login" component={Login} />
+          <Route exact path="/SingUp" component={SingUp} />
+          <Route exact path="/Perfil" component={Perfil} />
         </Switch>
       </BrowserRouter>
     ) : (

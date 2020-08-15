@@ -1,0 +1,46 @@
+div .main-singup {
+  display: flex;
+  flex-direction: column;
+  height: 72px;
+  padding-top: 115px;
+  padding-bottom: 25px;
+  font: inherit;
+  max-width: 620px;
+  align-items: center;
+  margin: auto;
+}
+
+div .main-singup form {
+  display: flex;
+  flex-direction: column;
+}
+
+div .main-singup input {
+  margin-bottom: 5px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  padding: 0 20px;
+  font-size: 14px;
+}
+
+div .main-singup label {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+div .main-singup button {
+  padding: 10px 20px;
+  border-radius: 4px;
+  background: #272727;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+div .main-singup a {
+  text-align: center;
+  color: #272727;
+  font-size: 15px;
+}
