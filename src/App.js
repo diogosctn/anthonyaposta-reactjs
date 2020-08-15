@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import firebase from "./firebase";
+//import firebase from "./firebase";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -10,14 +10,8 @@ import NewPost from "./pages/NewPost";
 
 class App extends Component {
   state = {
-    firebaseInitialized: false,
+    firebaseInitialized: true,
   };
-
-  componentDidMount() {
-    firebase.isInitialized().then((resultado) => {
-      this.setState({ firebaseInitialized: resultado });
-    });
-  }
 
   render() {
     return this.state.firebaseInitialized !== false ? (

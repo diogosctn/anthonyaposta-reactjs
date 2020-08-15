@@ -1,0 +1,22 @@
+div .main-members {
+  display: flex;
+  flex-direction: column;
+  height: 72px;
+  padding-top: 100px;
+  font: inherit;
+  max-width: 620px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+div .main-members h1 {
+  font-family: "Chivo", "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 40px;
+  color: #303030;
+  margin-bottom: -15px;
+}
+
+div .main-members h2 {
+  font-size: 20px;
+  color: #aaa;
+}
