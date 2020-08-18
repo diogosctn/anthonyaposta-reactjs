@@ -31,10 +31,10 @@ class App extends Component {
           <Route exact path="/About" component={About} />
           <Route exact path="/Blog" component={Blog} />
           <Route exact path="/Members" component={Members} />
-          <Route exact path="/NewPost" component={NewPost} />
           <Route exact path="/Login" component={Login} />
           <Route exact path="/SingUp" component={SingUp} />
           <Route exact path="/Perfil" component={Perfil} />
+          <Route exact path="/Perfil/NewPost" component={NewPost} />
         </Switch>
       </BrowserRouter>
     ) : (

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import firebase from "../../firebase";
+import { Link } from "react-router-dom";
 
 export class Perfil extends Component {
   constructor(props) {
@@ -30,6 +31,9 @@ export class Perfil extends Component {
     return (
       <div id="dashboard">
         <p>Logado com: {firebase.getCurrent()}</p>
+        <Link to="/Perfil/NewPost">
+          <button>NovoPost</button>
+        </Link>
         <button onClick={() => this.logout()}>Deslogar</button>
       </div>
     );

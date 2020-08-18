@@ -1,5 +1,5 @@
 import app from "firebase/app";
-import "firebase/database";
+import "firebase/firestore";
 import "firebase/auth";
 import "firebase/storage";
 
@@ -17,7 +17,7 @@ let firebaseConfig = {
 class Firebase {
   constructor() {
     app.initializeApp(firebaseConfig);
-    this.app = app.database();
+    this.app = app.firestore();
     this.storage = app.storage();
   }
 
@@ -33,8 +33,14 @@ class Firebase {
     await app.auth().createUserWithEmailAndPassword(email, password);
 
     const uid = app.auth().currentUser.uid;
-    return app.database().ref("usuarios").child(uid).set({
-      nome: nome,
+    return app.firestore().collection("usuarios").doc(uid).set({ nome });
+  }
+
+  addPost(post) {
+    console.log(post);
+    app.firestore().collection("posts").add({
+      autor: app.auth().currentUser.uid,
+      body: post,
     });
   }
 
